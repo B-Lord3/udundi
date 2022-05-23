@@ -2,14 +2,22 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
 import SocialIcons from '@/components/SocialIcons.vue'
+
+// Import Bootstrap and BootstrapVue CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css'
+
 </script>
 
 <template>
-  <div class="wrapper">
-    <div class="hero">
-      <div class="hero-bg">
-        <HelloWorld msg="Explore" />
-        <SocialIcons />
+  <div class="container-fluid">
+    <div class="row">
+      <div class="wrapper">
+        <div class="hero">
+          <div class="hero-bg">
+            <HelloWorld msg="Explore" />
+            <SocialIcons />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -31,6 +39,7 @@ import SocialIcons from '@/components/SocialIcons.vue'
 .wrapper {
   width: 100%;
   height: auto;
+  padding: 0;
 }
 
 .hero {
@@ -53,30 +62,17 @@ import SocialIcons from '@/components/SocialIcons.vue'
 }
 
 .hero-bg .sidebar {
-  width: 350px;
+  /*width: 350px;*/
   height: 100%;
   background-color: #611818;
-  position: absolute;
   top: 0;
   left: 0;
-}
-
-@media (hover: hover) {
-  a:hover {
-    /*background-color: hsla(160, 100%, 37%, 0.2);*/
-  }
 }
 
 @media (min-width: 1024px) {
   body {
     display: flex;
     place-items: center;
-  }
-
-  #app {
-    /*display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;*/
   }
 }
 </style>

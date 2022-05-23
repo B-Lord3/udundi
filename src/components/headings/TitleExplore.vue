@@ -8,7 +8,8 @@
 
 <style scoped>
 	svg {
-	    width: 765px;
+		width: 100%;
+	    max-width: 765px;
     	height: auto;
 	}
 </style>
